@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Opções...
+
+editor="vim"
+
+# Variaveis
+
+hoje=$( date +'%d/%m/%y' )
+
+arg1="Passe um nome para o novo arquivo sem espaços!"
+existe="Este arquivo já exite!"
+
+header="#!/usr/bin/env bash
+# ------------------------------------------------------------------------ 
+# Script   : $1                                                            
+# Descrição:                                                               
+# Versão   : 0.1                                                           
+# Autor    : Wanderson Sepulchro <telegram: @wsepulchro>
+# Data     : $hoje
+# Licença  : GNU/GPL v3.0
+# -------------------------------------------------------------------------
+# Uso      : 
+# -------------------------------------------------------------------------
+
+"
+
+# testar se usuário passou o númro certo de argumentos (apenas 1) novo script ...
+[[ $# -ne 1 ]] && echo "$arg1" && exit 1
+
+# testar se arquivo já existe ...
+[[ -f $1 ]] && echo "$existe" && exit 1
+
+echo "$header" > $1
+chmod +x $1
+$editor $1
+
+exit 0
