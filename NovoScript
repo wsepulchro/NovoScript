@@ -12,16 +12,16 @@ arg1="Passe um nome para o novo arquivo sem espaços!"
 existe="Este arquivo já exite!"
 
 header="#!/usr/bin/env bash
-# ------------------------------------------------------------------------ 
-# Script   : $1                                                            
+# 
+#                                                             
 # Descrição:                                                               
 # Versão   : 0.1                                                           
 # Autor    : seunome <seucontato>
 # Data     : $hoje
 # Licença  : GNU/GPL v3.0
-# -------------------------------------------------------------------------
-# Uso      : 
-# -------------------------------------------------------------------------
+#  Uso      : 
+# 
+#
 
 "
 
